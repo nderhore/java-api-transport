@@ -21,7 +21,7 @@ Ce projet est une API développée avec Spring Boot et optimisée pour Java 21 a
 
 1. **Cloner le dépôt**
    ```bash
-   git clone https://github.com/votre-utilisateur/api-gestion-flotte.git
+   git clone https://github.com/nderhore/java-api-transport.git
    cd api-gestion-flotte
    ```
 

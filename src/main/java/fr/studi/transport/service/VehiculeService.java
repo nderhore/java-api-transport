@@ -42,4 +42,17 @@ public class VehiculeService {
     public Vehicule getVehiculeByImmatriculation(String immatriculation) {
         return vehiculeRepository.findByImmatriculation(immatriculation);
     }
+
+    public Vehicule updateVehiculeById(Long id, Vehicule vehicule) {
+        //1. recuperer le vehicule
+        Vehicule oldVehicule = this.getVehiculeById(id);
+        if(oldVehicule != null){
+            oldVehicule.setAnnee(vehicule.getAnnee());
+            oldVehicule.setImmatriculation(vehicule.getImmatriculation());
+            oldVehicule.setModele(vehicule.getModele());
+            oldVehicule.setMarque(vehicule.getMarque());
+            this.vehiculeRepository.save(oldVehicule);
+        }
+        return oldVehicule;
+    }
 }

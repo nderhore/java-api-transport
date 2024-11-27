@@ -38,5 +38,14 @@ public class ConducteurService {
     }
 
 
-
+    public Conducteur updateConducteurById(Long id, Conducteur conducteur) {
+        Conducteur oldConducteur = getConducteurById(id);
+        if(oldConducteur != null) {
+            oldConducteur.setNom(conducteur.getNom());
+            oldConducteur.setPrenom(conducteur.getPrenom());
+            oldConducteur.setVehiculeId(conducteur.getVehiculeId());
+            return conducteurRepository.save(oldConducteur);
+        }
+        return oldConducteur;
+    }
 }

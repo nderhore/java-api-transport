@@ -33,4 +33,9 @@ public class ConducteurController {
     public Conducteur createConducteur(@RequestBody Conducteur conducteur) {
         return conducteurService.createConducteur(conducteur);
     }
+
+    @PutMapping("/{id}")
+    public Conducteur updateConducteurById(@PathVariable Long id, @RequestBody Conducteur conducteur) {
+        return conducteurService.updateConducteurById(id,conducteur);
+    }
 }

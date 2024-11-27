@@ -47,6 +47,11 @@ public class VehiculeController {
         return vehiculeService.getVehiculeByImmatriculation(immatriculation);
     }
 
+    @PutMapping("/{id}")
+    public Vehicule updateVehiculeById(@PathVariable Long id, @RequestBody Vehicule vehicule){
+        return vehiculeService.updateVehiculeById(id,vehicule);
+    }
+
 
 
 }

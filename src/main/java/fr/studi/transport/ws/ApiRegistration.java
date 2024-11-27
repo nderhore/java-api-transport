@@ -7,4 +7,5 @@ public interface ApiRegistration {
     final String REST_VEHICULE = "/vehicule";
 
     final String REST_CONDUCTEUR = "/conducteur";
+     final String REST_IMMATRICULATION = "/immatriculation";
 }

@@ -42,6 +42,11 @@ public class VehiculeController {
         vehiculeService.deleteVehiculeById(id);
     }
 
+    @GetMapping(ApiRegistration.REST_IMMATRICULATION + "/{immatriculation}")
+    public Vehicule getVoitureByImmatriculation(@PathVariable String immatriculation){
+        return vehiculeService.getVehiculeByImmatriculation(immatriculation);
+    }
+
 
 
 }
